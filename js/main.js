@@ -2,11 +2,13 @@ var hh = $('header').outerHeight();
 
 $(window).scroll(function(){
 
-  if ($(window).pageYOffset() > hh - 50){
+  if (window.pageYOffset > hh - 75){
     $('header').addClass('fixed');
+    $('h1').css('padding-top', hh)
   }
   else{
     $('header').removeClass('fixed');
+    $('h1').css('padding-top', 0)
   }
 
 });

@@ -60,6 +60,22 @@ header{
   position:relative;
 }
 
+header.fixed{
+  display:block;
+  position:fixed;
+  top:0;
+  height:75px;
+}
+
+header.fixed .wordmark{
+  display:none;
+}
+
+header.fixed .logo{
+  width:3rem;
+  padding-top:1rem;
+}
+
 .logo{
   padding-top:2rem;
   display:block;
@@ -127,11 +143,11 @@ header nav a:hover{
   color:#0D4391;
 }
 
-#about, #team{
+#about, #team, #solution, #problem{
   display:inline-block;
   width:100%;
   text-align:left;
-  padding:5rem 0;
+  padding:3rem 0;
 }
 
 #about{
@@ -185,13 +201,12 @@ header nav a:hover{
 
 #problem{
   display:inline-block;
-  background-color: #394C66;
+  background-color: #C2D2F0;
   color:white;
-  padding:4rem 0;
 }
 
 #problem h2{
-  color:#C2D2F0;
+  color:#394C66;
 }
 
 #problem p{
@@ -294,9 +309,6 @@ footer a{
     float:left;
   }
 
-  #about, #team, #problem, #solution{
-
-  }
 
   #about div{
     width:calc(100%/3);
