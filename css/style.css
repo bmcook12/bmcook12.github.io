@@ -16,10 +16,12 @@ light grey: #EDECE9;
 body{
   font-size:10px;
   margin:0;
+  font-family: 'Helvetica', sans-serif;
+  text-align:center;
 }
 
 p,a,span{
-  font-size:1.6rem;
+  font-size:1.2rem;
 }
 
 a{
@@ -30,10 +32,29 @@ a:hover{
   text-decoration:underline;
 }
 
+h1, h2, h3{
+  font-weight:200;
+}
+
 h1{
+  margin-top:4rem;
+  text-align:center;
+  color:  rgb(17, 19, 120);
+  font-size:2.6rem;
+}
+
+h2{
   text-align:center;
   color:  rgb(17, 19, 120);
   font-size:2.2rem;
+}
+
+h3{
+  text-align:center;
+  color:rgb(41, 44, 47);
+  font-size:1.8rem;
+  margin-top:2rem;
+  padding:0 5%;
 }
 
 
@@ -46,24 +67,34 @@ header{
 
 header img{
   display:block;
-  width:8rem;
+  width:25rem;
   margin:auto;
 }
 
 header nav{
   display:inline-block;
   position:absolute;
-  top:2rem;
-  right:2rem;
+  top:1rem;
+  right:1rem;
+}
+
+.nav-button{
+  float:right;
+  display:inline-block;
+  cursor:pointer;
+}
+
+.nav-button rect{
+  fill:white;
 }
 
 header nav ul{
   list-style:none;
+  display:none;
 }
 
 header nav ul li{
-  display:inline-block;
-  margin-left:2rem;
+  display:block;
 }
 
 header nav a, header nav a:hover{
@@ -73,6 +104,7 @@ header nav a, header nav a:hover{
 #about, #team{
   display:inline-block;
   width:100%;
+  text-align:left;
   padding:5rem 0;
 }
 
@@ -92,16 +124,56 @@ header nav a, header nav a:hover{
   width:90%;
 }
 
+#testimonial{
+  background-color: #EDECE9;
+  padding:5rem 0;
+}
+
+#testimonial p{
+  color: rgb(17, 19, 120);
+  font-size:2rem;
+  font-weight:200;
+  width:80%;
+  margin:auto;
+}
+
 #team .team-member{
   text-align:center;
   float:left;
 }
 
+.img-container{
+  position:relative;
+  width:60%;
+  display:inline-block;
+}
+
+.img-container .overlay{
+  opacity:0;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(17, 19, 120, .7);
+  color:white;
+  transition:opacity .6s ease-in-out;
+  -webkit-transition:opacity .5s ease-in-out;
+  -moz-transition:opacity .5s ease-in-out;
+  -o-transition:opacity .5s ease-in-out;
+}
+
+.img-container:hover .overlay{
+  opacity:1;
+}
+
 .team-member img{
   display:block;
   margin:auto;
-  width:90%;
+  width:100%;
 }
+
+
 
 footer{
   background-color: rgb(17, 19, 120);
@@ -116,6 +188,28 @@ footer a{
 
 @media (min-width:768px){
 
+  .nav-button{
+    display:none;
+  }
+
+  header nav{
+    top:2rem;
+    right:2rem;
+  }
+
+  header nav ul{
+    display:inline-block;
+  }
+
+  header nav ul li{
+    display:inline-block;
+    margin-left:2rem;
+  }
+
+  #about, #team{
+    width:85%;
+  }
+
   #about div{
     width:calc(100%/3);
   }
@@ -126,10 +220,7 @@ footer a{
   }
 
   #team .team-member{
-    width:50%;
+    width:25%;
   }
 
-  .team-member img{
-    width:60%;
-  }
 }
