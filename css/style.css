@@ -7,7 +7,9 @@ med blue: #0D4391
 
 dark grey: #394C66
 
-light Grey: #C2D2F0;
+light Grey: #C9CCD9
+
+;
 
 */
 
@@ -93,7 +95,7 @@ header.fixed .logo{
 
 header nav{
   position: absolute;
-  top: 22px;
+  top: 14px;
   display: inline-block;
   right: 7px;
   z-index: 302;
@@ -121,6 +123,11 @@ header nav ul{
   max-height: 0;
   overflow: hidden;
   padding:0;
+  text-align:right;
+}
+
+header.fixed nav ul{
+  background-color: #4667B1;
 }
 
 header nav ul.shown{
@@ -133,6 +140,8 @@ header nav ul.shown{
 
 header nav ul li{
   display:block;
+  padding-right:1rem;
+  margin:.5rem 0;
 }
 
 header nav a{
@@ -190,7 +199,9 @@ header nav a:hover{
 }
 
 #testimonial .attribution{
-  color: #C2D2F0;
+  color: #C9CCD9
+
+;
 }
 
 #problem img{
@@ -201,7 +212,9 @@ header nav a:hover{
 
 #problem{
   display:inline-block;
-  background-color: #C2D2F0;
+  background-color: #C9CCD9
+
+;
   color:white;
 }
 
@@ -267,7 +280,7 @@ header nav a:hover{
 
 
 footer{
-  background-color: rgb(17, 19, 120);
+  background-color: #394C66;
   text-align:center;
 }
 
@@ -284,7 +297,7 @@ footer a{
   }
 
   header nav{
-    top:2rem;
+    top:1.4rem;
     right:2rem;
   }
 
@@ -296,7 +309,8 @@ footer a{
 
   header nav ul li{
     display:inline-block;
-    margin-left:2rem;
+    margin-left:1rem;
+    padding-right:0;
   }
 
   #testimonial{
