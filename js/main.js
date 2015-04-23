@@ -13,7 +13,7 @@ $(window).scroll(function(){
 
 
 $('.nav-button').click(function(){
-  $('header nav ul').slideToggl();
+  $('header nav ul').toggleClass('shown');
 });
 
 

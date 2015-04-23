@@ -1,22 +1,20 @@
 
 /* Color palette
 
-light blue: rgb(42, 102, 240)
-dark blue: rgb(17, 19, 120)
-med blue: rgb(37, 44, 187)
+light blue: #4667B1
+dark blue: #142947
+med blue: #0D4391
 
-dark grey: rgb(41, 44, 47)
+dark grey: #394C66
 
-green: #81C99C;
-
-light grey: #EDECE9;
+light Grey: #C2D2F0;
 
 */
 
 body{
   font-size:10px;
   margin:0;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Raleway, Helvetica', sans-serif;
   text-align:center;
 }
 
@@ -28,9 +26,6 @@ a{
   text-decoration:none;
 }
 
-a:hover{
-  text-decoration:underline;
-}
 
 h1, h2, h3{
   font-weight:200;
@@ -39,14 +34,14 @@ h1, h2, h3{
 h1{
   margin-top:4rem;
   text-align:center;
-  color:  rgb(17, 19, 120);
-  font-size:2.6rem;
+  color: #394C66;
+  font-size:3rem;
 }
 
 h2{
   text-align:center;
   color:  rgb(17, 19, 120);
-  font-size:2.2rem;
+  font-size:2.6rem;
 }
 
 h3{
@@ -59,29 +54,45 @@ h3{
 
 
 header{
-  background-color: rgb(42, 102, 240);
+  background-color:#4667B1;
   display:inline-block;
   width:100%;
   position:relative;
 }
 
-header img{
+.logo{
+  padding-top:2rem;
   display:block;
-  width:25rem;
+  width:5rem;
   margin:auto;
+  margin-bottom:1rem;
+}
+
+.wordmark{
+  display:block;
+  width:20rem;
+  margin:auto;
+  padding-bottom:2rem;
 }
 
 header nav{
-  display:inline-block;
-  position:absolute;
-  top:1rem;
-  right:1rem;
+  position: absolute;
+  top: 22px;
+  display: inline-block;
+  right: 7px;
+  z-index: 302;
 }
 
 .nav-button{
-  float:right;
-  display:inline-block;
-  cursor:pointer;
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+
+.nav-button svg{
+  cursor: pointer;
+  display: inline-block;
+  float: right;
 }
 
 .nav-button rect{
@@ -89,16 +100,31 @@ header nav{
 }
 
 header nav ul{
-  list-style:none;
-  display:none;
+  width: 100%;
+  margin-top: 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  padding:0;
+}
+
+header nav ul.shown{
+  max-height: 400px;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  -moz-transition: max-height 0.5s ease-in-out;
+  -o-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
 }
 
 header nav ul li{
   display:block;
 }
 
-header nav a, header nav a:hover{
-  color:white;
+header nav a{
+  color: #ffffff;
+}
+
+header nav a:hover{
+  color:#0D4391;
 }
 
 #about, #team{
@@ -108,6 +134,8 @@ header nav a, header nav a:hover{
   padding:5rem 0;
 }
 
+#about{
+}
 
 #about div{
   float:left;
@@ -117,24 +145,72 @@ header nav a, header nav a:hover{
 #about div img{
   display:block;
   margin:auto;
+  width:5rem;
   padding-bottom:1.5rem;
 }
 
-#about div p{
+#about .blurb{
   width:90%;
+  color: #142947;
+  line-height:2;
+}
+
+#about .point{
+  font-size: 1.4rem;
+  color: #4667B1;
+  margin-bottom:1.5rem;
 }
 
 #testimonial{
-  background-color: #EDECE9;
-  padding:5rem 0;
+  padding:2rem 0;
 }
 
 #testimonial p{
-  color: rgb(17, 19, 120);
-  font-size:2rem;
+  color: #fff;
+  font-size:1.6rem;
   font-weight:200;
   width:80%;
   margin:auto;
+}
+
+#testimonial .attribution{
+  color: #C2D2F0;
+}
+
+#problem img{
+  display:block;
+  width:80%;
+  margin:auto;
+}
+
+#problem{
+  display:inline-block;
+  background-color: #394C66;
+  color:white;
+  padding:4rem 0;
+}
+
+#problem h2{
+  color:#C2D2F0;
+}
+
+#problem p{
+  line-height:1.5;
+  text-align:left;
+}
+
+#problem p em{
+  color:red;
+  font-style:normal;
+}
+
+#solution{
+  display:inline-block;
+}
+
+#solution p, #solution img{
+  float:left;
+  width:50%;
 }
 
 #team .team-member{
@@ -199,6 +275,8 @@ footer a{
 
   header nav ul{
     display:inline-block;
+    max-height:100%;
+    margin-top:0;
   }
 
   header nav ul li{
@@ -206,8 +284,18 @@ footer a{
     margin-left:2rem;
   }
 
-  #about, #team{
-    width:85%;
+  #testimonial{
+    width:50%;
+    float:left;
+  }
+
+  #problem .graphics{
+    width:50%;
+    float:left;
+  }
+
+  #about, #team, #problem, #solution{
+
   }
 
   #about div{
