@@ -1,0 +1,135 @@
+
+/* Color palette
+
+light blue: rgb(42, 102, 240)
+dark blue: rgb(17, 19, 120)
+med blue: rgb(37, 44, 187)
+
+dark grey: rgb(41, 44, 47)
+
+green: #81C99C;
+
+light grey: #EDECE9;
+
+*/
+
+body{
+  font-size:10px;
+  margin:0;
+}
+
+p,a,span{
+  font-size:1.6rem;
+}
+
+a{
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+h1{
+  text-align:center;
+  color:  rgb(17, 19, 120);
+  font-size:2.2rem;
+}
+
+
+header{
+  background-color: rgb(42, 102, 240);
+  display:inline-block;
+  width:100%;
+  position:relative;
+}
+
+header img{
+  display:block;
+  width:8rem;
+  margin:auto;
+}
+
+header nav{
+  display:inline-block;
+  position:absolute;
+  top:2rem;
+  right:2rem;
+}
+
+header nav ul{
+  list-style:none;
+}
+
+header nav ul li{
+  display:inline-block;
+  margin-left:2rem;
+}
+
+header nav a, header nav a:hover{
+  color:white;
+}
+
+#about, #team{
+  display:inline-block;
+  width:100%;
+  padding:5rem 0;
+}
+
+
+#about div{
+  float:left;
+  text-align:center;
+}
+
+#about div img{
+  display:block;
+  margin:auto;
+  padding-bottom:1.5rem;
+}
+
+#about div p{
+  width:90%;
+}
+
+#team .team-member{
+  text-align:center;
+  float:left;
+}
+
+.team-member img{
+  display:block;
+  margin:auto;
+  width:90%;
+}
+
+footer{
+  background-color: rgb(17, 19, 120);
+  text-align:center;
+}
+
+footer a{
+  display:inline-block;
+  margin:2rem;
+}
+
+
+@media (min-width:768px){
+
+  #about div{
+    width:calc(100%/3);
+  }
+
+  #about div p{
+    width:80%;
+    margin:auto;
+  }
+
+  #team .team-member{
+    width:50%;
+  }
+
+  .team-member img{
+    width:60%;
+  }
+}
