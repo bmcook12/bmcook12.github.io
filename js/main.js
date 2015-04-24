@@ -8,7 +8,7 @@ $(window).scroll(function(){
   }
   else{
     $('header').removeClass('fixed');
-    $('h1').css('padding-top', 0)
+    $('h1').css('padding-top', '4rem')
   }
 
 });
@@ -18,6 +18,10 @@ $('.nav-button').click(function(){
   $('header nav ul').toggleClass('shown');
 });
 
+
+$('nav ul a').click(function(){
+  $('header nav ul').removeClass('shown');
+});
 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
